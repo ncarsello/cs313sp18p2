@@ -49,7 +49,7 @@ public class TestIterator {
     final Iterator<Integer> i = list.iterator();
     assertTrue(i.hasNext());
     assertEquals(33, i.next().intValue());
-    // TODO fix the expected values in the assertions below
+    // DONETODO fix the expected values in the assertions below
     assertTrue(i.hasNext());
     assertEquals(77, i.next().intValue());
     assertTrue(i.hasNext());
@@ -80,7 +80,7 @@ public class TestIterator {
         i.remove(); // TODO what happens if you use list.remove(77)?
       }
     }
-    // DONE TODO using assertEquals and Arrays.asList, express which values are left in the list
+    // DONETODO using assertEquals and Arrays.asList, express which values are left in the list
     // See TestList.java for examples of how to use Arrays.asList; also see the Java Arrays
     // class for more information
     assertEquals(Arrays.asList(33, 44, 55, 66), list);
