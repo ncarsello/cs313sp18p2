@@ -12,19 +12,20 @@ public class TestPerformance {
   // TODO run test and record running times for SIZE = 10, 100, 1000, 10000, ...
   // (choose in conjunction with REPS below up to an upper limit where the clock
   // running time is in the tens of seconds)
-  // TODO (optional) refactor to DRY
+  // TODO refactor to DRY
   // which of the two lists performs better as the size increases?
-  private final int SIZE = 10;
+  private final int SIZE = 100000;
+  
 
-  // TODO choose this value in such a way that you can observe an actual effect
+  // DONE TODO choose this value in such a way that you can observe an actual effect
   // for increasing problem sizes
-  private final int REPS = 1000000;
+  private final int REPS = 10000000;
 
   private List<Integer> arrayList;
 
   private List<Integer> linkedList;
 
-  @Before
+	@Before
   public void setUp() throws Exception {
     arrayList = new ArrayList<Integer>(SIZE);
     linkedList = new LinkedList<Integer>();
@@ -33,12 +34,13 @@ public class TestPerformance {
       linkedList.add(i);
     }
   }
-
+  
   @After
   public void tearDown() throws Exception {
     arrayList = null;
     linkedList = null;
   }
+  
 
   @Test
   public void testLinkedListAddRemove() {
